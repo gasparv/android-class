@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_departure"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_departure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_departure" />
+
+    <ImageView
+        android:id="@+id/icon_arrival"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_arrival"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_arrival" />
+
+    <TextView
+        android:id="@+id/place_departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_departure"
+        app:layout_constraintStart_toStartOf="@+id/icon_departure"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="KSC" />
+
+    <TextView
+        android:id="@+id/place_arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_arrival"
+        app:layout_constraintStart_toStartOf="@+id/icon_arrival"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="AMS" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="--------->"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_arrival"
+        app:layout_constraintEnd_toStartOf="@+id/icon_arrival"
+        app:layout_constraintStart_toEndOf="@+id/icon_departure"
+        app:layout_constraintTop_toTopOf="@+id/icon_arrival" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="10:30"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_departure"
+        app:layout_constraintStart_toStartOf="@+id/icon_departure"
+        app:layout_constraintTop_toBottomOf="@+id/icon_departure" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="12:10"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_arrival"
+        app:layout_constraintStart_toStartOf="@+id/icon_arrival"
+        app:layout_constraintTop_toBottomOf="@+id/icon_arrival" />
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LINEAR LAYOUT HERE" />
+
+        <Button
+            android:id="@+id/btn_detaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detaily" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
