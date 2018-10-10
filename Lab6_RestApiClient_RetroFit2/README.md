@@ -1,0 +1,3 @@
+## Fetching data from REST API Web service using Squareup's RetroFit2
+*Note: Please note that the Retrofit instance is created using the static singleton pattern. Calls to APIs can be carried out asynchronously by calling enqueue method or synchronously by calling execute method. The recommended way is to use the asynchronous approach because it handles the threading for you and does not block the UI thread*
+## Detailed description will be added soon.
