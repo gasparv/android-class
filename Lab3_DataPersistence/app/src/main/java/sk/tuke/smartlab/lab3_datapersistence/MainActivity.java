@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,18 +13,25 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 import sk.tuke.smartlab.lab3_datapersistence.RoomDb.DbTools;
 import sk.tuke.smartlab.lab3_datapersistence.RoomDb.Movie;
 
+import static android.os.Environment.getExternalStorageDirectory;
+
 public class MainActivity extends AppCompatActivity {
 
     List<Movie> insertedMovies;
     private final int PERMISSION_ID_ACCESS_STORAGE = 1000;
     private final String fileName = "movies.txt";
+    private final String extPath = "/dataFiles";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
             ((TextView)findViewById(R.id.tv_movie)).setText(insertedMovies.get(0).getTitle());
             saveFirstMovieNameToSharedPreferences("dataKey",insertedMovies.get(0).getTitle());
             if(ActivityCompat.checkSelfPermission(MainActivity.this,Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-                writeDataToFile(insertedMovies,fileName);
+                writeDataToFileInternal(insertedMovies,fileName);
+                writeDataToFileExternal(insertedMovies,fileName, extPath);
             }
             else{
                 ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},PERMISSION_ID_ACCESS_STORAGE);
@@ -69,8 +78,61 @@ public class MainActivity extends AppCompatActivity {
     }
     //END: ROOM DB Persistence TASKS in NEW THREAD
 
-    //START: FILE Persistence preparation and tasks
-    private void writeDataToFile(List<Movie> data, String fileName){
+
+    //START: FILE Persistence preparation and tasks - External storage
+    private void writeDataToFileExternal(List<Movie> data, String fileName, String relPath){
+        if(checkExtStorage()[1]) {
+            File storageDir = getExternalStorageDirectory();
+
+            File dir = new File(storageDir.getAbsolutePath() + relPath);
+            if (!dir.exists())
+                dir.mkdirs();
+
+            File file = new File(dir, fileName);
+
+            try {
+                FileOutputStream osWriter = new FileOutputStream(file);
+
+                osWriter.write("--- Tu sa zacina zapis ---".getBytes());
+                osWriter.write(("\n").getBytes());
+                for(Movie movie:data){
+                    osWriter.write(Long.toString(movie.getId()).getBytes());
+                    osWriter.write(("\t" + movie.getTitle()).getBytes());
+                    osWriter.write(("\t " + movie.getRelease_year()).getBytes());
+                    osWriter.write(("\t" + movie.getDirector()).getBytes());
+                    osWriter.write(("\n").getBytes());
+                }
+                osWriter.write("--- Tu sa konci zapis ---".getBytes());
+                osWriter.write("\n".getBytes());
+                osWriter.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+            }
+        }
+    }
+    private boolean[] checkExtStorage(){
+        boolean extStorageMounted = false;
+        boolean extStorageCanWrite = false;
+        String state = Environment.getExternalStorageState();
+
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            // Read and write
+            extStorageMounted = extStorageCanWrite = true;
+        } else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            // Only read
+            extStorageMounted = true;
+            extStorageCanWrite = false;
+        } else {
+            // No read, no write
+            extStorageMounted = extStorageCanWrite = false;
+        }
+        return new boolean[]{extStorageMounted,extStorageCanWrite};
+    }
+     //END: FILE Persistence preparation and tasks - External Storage
+
+    //START: FILE Persistence preparation and tasks - internal storage
+    private void writeDataToFileInternal(List<Movie> data, String fileName){
         FileOutputStream outputStream;
         try {
             outputStream = openFileOutput(fileName, Context.MODE_PRIVATE);
@@ -100,7 +162,8 @@ public class MainActivity extends AppCompatActivity {
                     if(permissions[i].equals(Manifest.permission.WRITE_EXTERNAL_STORAGE)){
                         if(grantResults[i] == PackageManager.PERMISSION_GRANTED){
                             Toast.makeText(this,"Writing to file ...",Toast.LENGTH_LONG).show();
-                                writeDataToFile(insertedMovies,fileName);
+                                writeDataToFileInternal(insertedMovies,fileName);
+                                writeDataToFileExternal(insertedMovies,fileName,extPath);
                         }
                         else{
                             //In real cases, this string should not be hardcoded and would be places inside the values/strings.xml file

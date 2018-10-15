@@ -11,3 +11,7 @@ This repo contains sources, labs and lectures for VMIR. It is taught during 5th 
 - [Lab 1](https://github.com/kkui-chi/VMIR/tree/master/Lab1_layouts_activities_intents) - Layouts, activity, implicit and explicit intent
 - [Lab 2](https://github.com/kkui-chi/VMIR/tree/master/Lab2_RecyclerView) - RecyclerView, ViewHolder pattern, LayoutManager, list adapters (RecyclerView.Adapter)
 - [Lab 3](https://github.com/kkui-chi/VMIR/tree/master/Lab3_DataPersistence) - Runtime permissions, basic safe threading using AsyncTask, Room ORM, Write to internal storage (file), store constants in SharedPreferences
+- [Lab 4a](https://github.com/kkui-chi/VMIR/tree/master/Lab4a_Location_LocationListener) - Retrieving user's location using LocationListener and GPS provider
+- [Lab 4b](https://github.com/kkui-chi/VMIR/tree/master/Lab4b_Location_FusedLocationProviderClient) - Retrieving user's location using Google Play Services FusedLocationProviderClient and GPS provider
+- [Lab 5](https://github.com/kkui-chi/VMIR/tree/master/Lab5_Maps_OSMDroid) - Providing maps using map framework OSMDroid with Open Street Maps
+- [Lab 6](https://github.com/kkui-chi/VMIR/tree/master/Lab6_RestApiClient_RetroFit2) - Consuming data from remote web REST APIs using RetroFit2 library
