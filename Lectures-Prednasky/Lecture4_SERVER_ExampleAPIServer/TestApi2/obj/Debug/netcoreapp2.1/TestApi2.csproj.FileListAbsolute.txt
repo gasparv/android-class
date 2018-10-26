@@ -1,0 +1,14 @@
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\bin\Debug\netcoreapp2.1\TestApi2.deps.json
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\bin\Debug\netcoreapp2.1\TestApi2.runtimeconfig.json
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\bin\Debug\netcoreapp2.1\TestApi2.runtimeconfig.dev.json
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\bin\Debug\netcoreapp2.1\TestApi2.dll
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.csprojAssemblyReference.cache
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.csproj.CoreCompileInputs.cache
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.RazorAssemblyInfo.cache
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.RazorAssemblyInfo.cs
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.AssemblyInfoInputs.cache
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.AssemblyInfo.cs
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.RazorTargetAssemblyInfo.cache
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\bin\Debug\netcoreapp2.1\TestApi2.pdb
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.dll
+C:\Users\gaspa\Documents\Visual Studio 2017\Projects\TestApi2\TestApi2\obj\Debug\netcoreapp2.1\TestApi2.pdb
