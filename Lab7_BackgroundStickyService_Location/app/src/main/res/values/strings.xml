@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab7_BackgroundService_Location</string>
+    <string name="button_click">Push da button &#8230;</string>
+</resources>
