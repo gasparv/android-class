@@ -19,3 +19,5 @@ This repo contains sources, labs and lectures for VMIR. It is taught during 5th 
 - [Lab 4b](https://github.com/kkui-chi/VMIR/tree/master/Lab4b_Location_FusedLocationProviderClient) - Retrieving user's location using Google Play Services FusedLocationProviderClient and GPS provider
 - [Lab 5](https://github.com/kkui-chi/VMIR/tree/master/Lab5_Maps_OSMDroid) - Providing maps using map framework OSMDroid with Open Street Maps
 - [Lab 6](https://github.com/kkui-chi/VMIR/tree/master/Lab6_RestApiClient_RetroFit2) - Consuming data from remote web REST APIs using RetroFit2 library
+- [Lab 7](https://github.com/kkui-chi/VMIR/tree/master/Lab7_BackgroundStickyService_Location) - Using indefinitely running background service to carry out location listening independent from activity lifecycle.
+- [Lab 7a](https://github.com/kkui-chi/VMIR/tree/master/Lab7a_IntentService) - Running batch jobs in a separate worker thread from any activity or service using IntentService.
