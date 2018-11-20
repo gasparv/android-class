@@ -1,6 +1,9 @@
 # Development of Mobile Intelligent Solutions (abbr. VMIR)
 This repo contains sources, labs and lectures for VMIR. It is taught during 5th semester for Bachelor's degree in Business Information Systems study programme.
 
+### News
+Tune into keynotes from [AndroidDevSummit CA, USA](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc8WFYCR9esqGGY0vOZm2l6e) 7-8.11.2018
+
 ### Lectures
 - [Lecture 1](https://github.com/kkui-chi/VMIR/blob/master/Lectures-Prednasky/VMIR-1.pptx) - Course organization, expected semester results & final exam. Basic construction of mobile apps
 - [Lecture 2](https://github.com/kkui-chi/VMIR/blob/master/Lectures-Prednasky/VMIR-2.pptx) - Resources, resource directories, modifiers, R class, drawables sizing, Gradle build script, SDK and platform tools ADB.
@@ -21,3 +24,5 @@ This repo contains sources, labs and lectures for VMIR. It is taught during 5th 
 - [Lab 6](https://github.com/kkui-chi/VMIR/tree/master/Lab6_RestApiClient_RetroFit2) - Consuming data from remote web REST APIs using RetroFit2 library
 - [Lab 7](https://github.com/kkui-chi/VMIR/tree/master/Lab7_BackgroundStickyService_Location) - Using indefinitely running background service to carry out location listening independent from activity lifecycle.
 - [Lab 7a](https://github.com/kkui-chi/VMIR/tree/master/Lab7a_IntentService) - Running batch jobs in a separate worker thread from any activity or service using IntentService.
+- [Lab 8](https://github.com/kkui-chi/VMIR/tree/master/Lab8_Sensors) - registering sensor listener and receiving data.
+- [Lab 8a](https://github.com/kkui-chi/VMIR/tree/master/Lab8a_Sensors_Android_Things_Rpi3) - using raspberry pi 3 with Android Things. Sample includes RC522 RFID r/w & BMP280 meteo sensor 
