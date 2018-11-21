@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mainPage"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Hlavná stránka" />
+        <item
+            android:id="@+id/nav_futureMatch"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Budúce zápasy" />
+        <item
+            android:id="@+id/nav_lastMatch"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Hrané zápasy" />
+        <item
+            android:id="@+id/nav_tableTeams"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Tabuľka tímov" />
+    </group>
+
+
+    <item android:title="Fanúšikovské nástroje">
+        <menu>
+            <item
+                android:id="@+id/nav_checkAtmosfera"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Zmeraj atmosféru" />
+            <item
+                android:id="@+id/nav_nearStadium"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Najbližší štadión" />
+        </menu>
+    </item>
+
+
+</menu>
