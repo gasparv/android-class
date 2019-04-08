@@ -1,3 +1,5 @@
+### ![Alt](http://icons.iconarchive.com/icons/custom-icon-design/all-country-flag/32/Slovakia-Flag-icon.png) [Show Readme in Slovak](https://github.com/gasparv/android-class/blob/master/README.sk.md) 
+
 # Development of Mobile Intelligent Solutions (abbr. VMIR)
 This repo contains sources, labs and lectures for VMIR. It is taught during 5th semester for Bachelor's degree in Business Information Systems study programme.
 
