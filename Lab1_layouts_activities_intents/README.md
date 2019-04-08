@@ -1,3 +1,5 @@
+### ![Alt](http://icons.iconarchive.com/icons/custom-icon-design/all-country-flag/32/Slovakia-Flag-icon.png) [Show Readme in Slovak](https://github.com/gasparv/android-class/blob/master/Lab1_layouts_activities_intents/README.sk.md) 
+
 # Resources, activity lifecycle and intents
 ### Contents:
 - This lab presents the role of static resources - files and folders that are usually used within the app design. Resource modifiers are presented on [__res/values/strings.xml__](https://github.com/kkui-chi/VMIR/blob/master/Lab1_layouts_activities_intents/app/src/main/res/values/strings.xml) and [__res/values-sk/strings.xml__](https://github.com/kkui-chi/VMIR/blob/master/Lab1_layouts_activities_intents/app/src/main/res/values-sk/strings.xml) folder. 
